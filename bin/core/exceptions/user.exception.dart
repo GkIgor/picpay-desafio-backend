@@ -5,3 +5,9 @@ class UserAlreadyExistsException implements Exception {
   @override
   String toString() => 'Message: $message';
 }
+
+class UserNotFoundException implements Exception {
+  final String message;
+
+  UserNotFoundException(this.message);
+}
