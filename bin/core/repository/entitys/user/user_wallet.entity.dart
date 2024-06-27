@@ -7,7 +7,7 @@ class UserWallet extends Wallet {
     required this.userId,
     required super.balance,
     required super.lastUpdated,
-    super.id,
+    super.walletId,
   });
 
   factory UserWallet.fromMap(Map<String, dynamic> map) {
@@ -15,7 +15,7 @@ class UserWallet extends Wallet {
       userId: map['user_id'],
       balance: map['balance'],
       lastUpdated: map['last_updated'],
-      id: map['id'],
+      walletId: map['id'],
     );
   }
 

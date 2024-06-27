@@ -1,15 +1,20 @@
-abstract class Account {
-  late int? id;
-  late String agency;
-  late String account;
-  late String verifier;
-  late DateTime createdAt;
+import 'wallet.class.dart';
+
+abstract class Account extends Wallet {
+  late int? accountId;
+  late String? agency;
+  late String? account;
+  late String? verifier;
+  late DateTime? createdAt;
 
   Account({
-    this.id,
+    this.accountId,
     required this.agency,
-    required this.account,
-    required this.verifier,
-    required this.createdAt,
+    this.account,
+    this.verifier,
+    this.createdAt,
+    super.walletId,
+     super.balance,
+    required super.lastUpdated,
   });
 }

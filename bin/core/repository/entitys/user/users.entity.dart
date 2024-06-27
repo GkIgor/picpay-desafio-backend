@@ -1,7 +1,9 @@
 //@Entity
+import '../../../class/account.class.dart';
 import '../../../class/cpf.class.dart';
 import '../../../class/credentials.class.dart';
 import '../../../class/wallet.class.dart';
+import '../account/user.entity.account.dart';
 import 'user_wallet.entity.dart';
 import 'users_credentials.entity.dart';
 
@@ -66,7 +68,7 @@ class User {
     return UserWallet(
       balance: 0,
       lastUpdated: DateTime.now(),
-      id: null,
+      walletId: null,
       userId: _id!,
     );
   }
